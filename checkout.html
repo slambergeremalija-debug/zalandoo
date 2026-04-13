@@ -1,0 +1,87 @@
+<!-- HEADER -->
+<header class="topbar">
+  <div class="logo">Zalandoo</div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Išči med 100.000 izdelki..." />
+  </div>
+
+  <nav class="main-nav">
+    <a href="women.html">Ženske</a>
+    <a href="men.html">Moški</a>
+    <a href="kids.html">Otroci</a>
+    <a href="shoes.html">Obutev</a>
+    <a href="accessories.html">Dodatki</a>
+  </nav>
+
+  <div class="user-nav">
+    <a href="login.html">Prijava</a>
+    <a href="cart.html">Košarica</a>
+  </div>
+</header>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Zalandoo – Najboljši nakupi. Mogoče.</p>
+  <p>
+    <a href="terms.html">Pogoji</a> |
+    <a href="privacy.html">Zasebnost</a> |
+    <a href="contact.html">Kontakt</a>
+  </p>
+</footer>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zalandoo – Blagajna</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="shop.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Zalandoo</div>
+  <div class="search-bar">
+    <input type="text" placeholder="Išči med 100.000 izdelki..." />
+  </div>
+  <nav class="main-nav">
+    <a href="women.html">Ženske</a>
+    <a href="men.html">Moški</a>
+    <a href="kids.html">Otroci</a>
+    <a href="shoes.html">Obutev</a>
+    <a href="accessories.html">Dodatki</a>
+  </nav>
+  <div class="user-nav">
+    <a href="login.html">Prijava</a>
+    <a href="cart.html">Košarica</a>
+  </div>
+</header>
+
+<main class="main">
+  <h1>Blagajna</h1>
+  <p>Vnesite podatke za plačilo (kar je že sumljivo):</p>
+
+  <form onsubmit="fakeCheckout(event)">
+    <label>Ime in priimek:<br><input type="text" required></label><br><br>
+    <label>Številka kartice:<br><input type="text" required></label><br><br>
+    <label>CVV:<br><input type="text" required></label><br><br>
+    <label>Naslov:<br><input type="text" required></label><br><br>
+    <button type="submit" class="btn">Zaključi nakup</button>
+  </form>
+
+  <p class="warning">
+    *Prava trgovina nikoli ne bi tako površno ravnala s podatki. To je učni primer.
+  </p>
+</main>
+
+<footer class="footer">
+  <p>© 2026 Zalandoo – Najboljši nakupi. Mogoče.</p>
+  <p>
+    <a href="terms.html">Pogoji</a> |
+    <a href="privacy.html">Zasebnost</a> |
+    <a href="contact.html">Kontakt</a>
+  </p>
+</footer>
+
+</body>
+</html>
