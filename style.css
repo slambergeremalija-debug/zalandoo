@@ -1,126 +1,214 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #111;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
+body {
+  background: #fafafa;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* TOP BAR */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
+  padding: 18px 40px;
+  background: #fff;
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  background: #fff;
   z-index: 100;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ff6a00;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .search-bar input {
-  padding: 10px;
-  width: 300px;
+  padding: 10px 14px;
+  width: 260px;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 6px;
 }
 
-.main-nav a, .user-nav a {
+.main-nav a,
+.user-nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #111;
+  color: #333;
+  font-weight: 500;
 }
 
-.main-nav a:hover, .user-nav a:hover {
-  text-decoration: underline;
+.main-nav a:hover,
+.user-nav a:hover {
+  color: #000;
 }
 
-.hero {
-  padding: 60px;
+/* PROMO BAR */
+.promo-bar {
+  background: #111;
+  color: #fff;
   text-align: center;
-  background: #fafafa;
+  padding: 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* HERO BANNER */
+.hero-banner {
+  height: 70vh;
+  background: url("img/item01.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  color: #fff;
+  position: relative;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 450px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background: #ff6a00;
+  padding: 12px 22px;
+  background: #111;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
-  margin-top: 10px;
+  font-weight: 600;
 }
 
 .btn:hover {
-  background: #e45a00;
+  background: #333;
+}
+
+/* CATEGORY BANNERS */
+.category-banners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 40px;
+}
+
+.cat-card {
+  height: 260px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cat-card a {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.cat-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+.cat-card.women {
+  background: url("img/item05.jpg") center/cover no-repeat;
+}
+
+.cat-card.men {
+  background: url("img/item06.jpg") center/cover no-repeat;
+}
+
+.cat-card.shoes {
+  background: url("img/item02.jpg") center/cover no-repeat;
+}
+
+.cat-card:hover::after {
+  background: rgba(0,0,0,0.55);
+}
+
+/* FEATURED PRODUCTS */
+.featured {
+  padding: 40px;
+}
+
+.featured h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  padding: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
   border: 1px solid #eee;
-  padding: 15px;
-  border-radius: 6px;
   transition: 0.2s;
-}
-
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .card img {
   width: 100%;
   border-radius: 6px;
+  margin-bottom: 10px;
 }
 
-.product-page {
-  display: flex;
-  gap: 40px;
-  padding: 40px;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.product-images img {
-  width: 350px;
-  border-radius: 6px;
-}
-
-.thumbs img {
-  width: 80px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.filters {
-  padding: 20px;
-  border-right: 1px solid #eee;
-}
-
-.filters select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-}
-
+/* FOOTER */
 .footer {
-  text-align: center;
-  padding: 30px;
   margin-top: 40px;
-  border-top: 1px solid #eee;
-  font-size: 13px;
-  color: #666;
+  padding: 30px;
+  background: #111;
+  color: #fff;
+  text-align: center;
 }
 
-.warning {
-  color: red;
-  margin-top: 20px;
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
